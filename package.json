@@ -1,0 +1,29 @@
+{
+  "name": "log",
+  "version": "1.0.0",
+  "description": "kim dong young",
+  "main": "index.js",
+  "repository": "https://github.com/realmind87/log.git",
+  "author": "realmind87 <realmind87@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "eslint-config-next": "^13.0.2",
+    "next": "^13.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "sass": "^1.56.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "typescript": "^4.8.4"
+  }
+}
