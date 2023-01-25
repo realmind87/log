@@ -85,6 +85,32 @@ body {
   }
 }
 
+.container {
+  main {
+    .content {
+      overflow: hidden;
+
+      .svg-container {
+        .graph-circle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+  
+          circle,
+          rect,
+          line {
+            fill: transparent;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+
+
 @include desktop {
 
 }
