@@ -24,8 +24,7 @@
       "@/styles/*": ["styles/*"],
       "@/reducers/*": ["reducers/*"],
       "@/features/*": ["features/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/store/*": ["store/*"]
+      "@/public/*": ["public/*"],
     }
   },
   "exclude": [
