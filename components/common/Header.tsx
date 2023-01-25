@@ -13,12 +13,6 @@ const Header = () => {
                     alt="Logo"
                 />
             </h1>
-            <div className="switch-wrapper">
-                <input type="checkbox" id="switch-point" />
-                <label htmlFor="switch-point" className="switch-label">
-                    <span className="onf-btn"></span>
-                </label>
-            </div>
         </header>
     )
 }

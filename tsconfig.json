@@ -25,6 +25,7 @@
       "@/reducers/*": ["reducers/*"],
       "@/features/*": ["features/*"],
       "@/public/*": ["public/*"],
+      "@/hooks/*": ["hooks/*"],
     }
   },
   "exclude": [
