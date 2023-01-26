@@ -2,7 +2,12 @@
 @import 'common.scss';
 
 /* 공통 */
+html {
+  overflow: hidden;
+}
+
 body {
+  overflow: hidden;
   &.hidden {
     overflow: hidden;
   }
@@ -12,9 +17,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   height: 60px;
   padding: 0 1rem;
-  background-color: #000;
+  z-index: 1000;
 
   .logo {
     overflow: hidden;
@@ -89,12 +97,16 @@ body {
 .container {
   main {
     .content {
-      overflow: hidden;
+      height: 100vh;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
 
       .visual-wrap {
         position: relative;
         overflow: hidden;
         background-color: #000;
+        height: 100vh;
+        scroll-snap-align: start;
         
         .info-wrap {
           background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgb(0, 15, 71) 100%);
@@ -107,7 +119,16 @@ body {
             width: 100%;
             height: 20rem;
             background: linear-gradient(#000000 0%, transparent 100%);
-            content: ''
+          }
+
+          .bottom-gradient {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            display: block;
+            width: 100%;
+            height: 20rem;
+            background: linear-gradient(transparent 0%, rgb(0, 15, 71) 100%);
           }
 
           .gird-wrap {
@@ -116,7 +137,7 @@ body {
 
             .colum {
               width: 50%;
-              opacity: 0.2;
+              opacity: 0.1;
 
               &:last-child {
                 margin-left: 2rem;
@@ -132,7 +153,7 @@ body {
             }
           }
         }
-
+        
         .txt {
           position: absolute;
           top: 0px;
@@ -150,36 +171,136 @@ body {
         }
       }
 
+      .project-wrap {
+        scroll-snap-align: start;
+        height: 100vh;
+        background: linear-gradient(rgb(0, 15, 71) 0%, #0EC0F5 100%);
+      }
+
       .svg-container {
-        padding: 5rem 0;
+        
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        scroll-snap-align: start;
+        padding: 0 2rem;
+        background: linear-gradient(#0EC0F5 0%, #fff 100%);
+
+        .tit {
+          font-size: 4rem;
+          color:#fff;
+          font-weight: bold;
+          font-style: italic;
+          text-align: center;
+        }
 
         .technica-wrapper {
-
+          position: relative;
           display: flex;
           flex-wrap: wrap;
+          padding: 3rem 1rem 0 1rem;
+          margin-top: 3rem;
+          border-radius: 2rem;
+          background-color: #fff;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 
           .graph-circle {
             display: flex;
             width: 50%;
             justify-content: center;
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
     
             circle,
             rect,
             line {
               fill: transparent;
             }
+            text {
+              font-size: 1.8rem
+            }
           }
         }
       }
-      
     }
   }
 }
 
-
-
 @include desktop {
+  .container {
+    main {
+      .content {
+        .visual-wrap {
+          .info-wrap {
+            .top-gradient {
+              height: 50rem;
+            }
+            
+            .bottom-gradient {
+              height: 50rem;
+            }
+  
+            .gird-wrap {
+              display: flex;
+              padding: 0 2rem;
+              
+              .colum {
+                width: 20%;
+                
+                &:not(:first-child) {
+                  margin-left: 2rem;
+                }
+                
+                .box {
+                  width: 100%;
+                  height: 500px;
+                  background-color: #c44;
+                  border-radius: 1rem;
+                  margin-bottom: 2rem;
+                }
+              }
+            }
+          }
+  
+          .txt {
+            font-size: 6rem;
 
+            br {
+              display: none;
+            }
+          }
+        }
+  
+        .svg-container {
+          width: 100%;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          margin: 0 auto;
+
+          .tit {
+            font-size: 12rem;
+            text-align: center;
+          }
+          
+          .technica-wrapper {
+            width: 100%;
+            max-width: 2000px;
+            padding: 6rem 0;
+            margin: 8rem auto 0;
+
+            .graph-circle {
+              width: 20%;
+              margin-bottom: 0rem;
+
+              text {
+                font-size: 3rem
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

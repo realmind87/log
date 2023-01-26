@@ -1,8 +1,11 @@
+import { motion } from 'framer-motion'
+import { mainScrollVariants } from '@/hooks/util'
+
 const SVGLayout = ({ children }) => {   
     return (
-        <div className='svg-container'>
+        <motion.div className='svg-container'>
             {children}
-        </div>
+        </motion.div>
     )
 }
 
