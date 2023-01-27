@@ -12,7 +12,7 @@ export const useWindowResize = () => {
         })
         setIsDesktop(window.innerWidth >= 1024 ? true : false)
     }
-
+    
     useEffect(() => {
         handleResize()
         window.addEventListener('resize', handleResize)

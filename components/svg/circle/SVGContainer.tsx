@@ -13,7 +13,7 @@ const SVGContainer = () => {
     
     return (
         <SVGLayout>
-            <motion.h2 
+            <motion.h2
                 className='tit'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
