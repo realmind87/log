@@ -3,6 +3,7 @@ import { AppLayout } from '@/components/index';
 import type { NextPageWithLayout } from './_app'
 import SVGContainer from "@/components/svg/circle/SVGContainer"
 import VisualLayout from '@/components/layout/VisualLayout'
+import ProjectLayout from '@/components/layout/ProjectLayout'
 import { motion } from "framer-motion";
 import { mainScrollVariants } from '@/hooks/util'
 
@@ -11,6 +12,7 @@ const Page: NextPageWithLayout = () => {
         <motion.div className='content'>
             <VisualLayout />
             <SVGContainer />
+            <ProjectLayout />
         </motion.div>
     )
 }
