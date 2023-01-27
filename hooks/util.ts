@@ -13,7 +13,7 @@ export const useWindowResize = () => {
         setIsDesktop(window.innerWidth >= 1024 ? true : false)
     }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => {
