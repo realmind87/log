@@ -1,6 +1,7 @@
 import { useScroll, Variants } from "framer-motion";
 import { useEffect, useLayoutEffect, useState } from "react";
 
+// resize
 export const useWindowResize = () => {
     const [windowSize, setWindowSize] = useState(null)
     const [isDesktop, setIsDesktop] = useState(null)
@@ -65,5 +66,16 @@ export const onGrapthCircle = () => {
     
     return {
         circle
+    }
+}
+
+// 디바운딩
+export const debounce = (func: Function, delay: number) => {
+    let timer = null;
+    return function (...args : any) {
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(() => func(...args), delay);
     }
 }

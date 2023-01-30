@@ -8,5 +8,7 @@ export const technicalList = [
 ]
 
 export const projectList = [
-    { name: '한화테크 Total Portal 웹 관리 시스템', date: '2022.06 ~ 2022.12' }
+    { id: 0, name: '한화테크 Total Portal 웹 관리 시스템', date: '2022.06 ~ 2022.12', pos: 100, isActive: true },
+    { id: 1, name: '한화테크 Total Portal 웹 관리 시스템', date: '2022.06 ~ 2022.12', pos: 100, isActive: false },
+    { id: 2, name: '한화테크 Total Portal 웹 관리 시스템', date: '2022.06 ~ 2022.12', pos: 100, isActive: false }
 ]

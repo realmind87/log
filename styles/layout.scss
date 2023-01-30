@@ -42,62 +42,6 @@ body {
   }
 }
 
-.switch-wrapper {
-  position: relative;
-
-  #switch-point {
-    position: absolute;
-    /* hidden */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-
-  .switch-label {
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    width: 58px;
-    height: 28px;
-    background: #fff;
-    border: 2px solid #daa;
-    border-radius: 20px;
-    transition: 0.2s;
-  }
-
-  .switch-label:hover {
-    background: #efefef;
-  }
-
-  .onf-btn {
-    position: absolute;
-    top: 3px;
-    left: 5px;
-    width: 19px;
-    height: 19px;
-    border-radius: 20px;
-    background: #daa;
-    transition: 0.2s;
-  }
-
-  /* checking style */
-  #switch-point:checked+.switch-label {
-    background: #c44;
-    border: 2px solid #c44;
-  }
-
-  #switch-point:checked+.switch-label:hover {
-    background: #e55;
-  }
-
-  /* move */
-  #switch-point:checked+.switch-label .onf-btn {
-    left: 33px;
-    background: #fff;
-    box-shadow: 1px 2px 3px #00000020;
-  }
-}
-
 .container {
   main {
     .content {
@@ -228,7 +172,6 @@ body {
         
         &__wrap {
           .project-container {
-
             .project-content {
               overflow-x: auto;
               scroll-snap-type: x mandatory;
@@ -245,11 +188,13 @@ body {
                 width: 0px;
                 background: transparent; /* make scrollbar transparent */
               }
-
+              
               .project-list {
                 scroll-snap-align: start;
                 width: 100%;
+                height: 100vh;
                 display: flex;
+                align-items: center;
                 justify-content: center;
                 flex: 0 0 100%;
                 

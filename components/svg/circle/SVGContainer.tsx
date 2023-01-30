@@ -1,7 +1,7 @@
 import SVGLayout from '@/components/layout/SVGLayout'
 import Pie from './Pie'
 import { motion } from 'framer-motion'
-import { technicalList } from "../data"
+import { technicalList } from "@/data.d"
 import { onGrapthCircle } from '@/hooks/util'
 import { useWindowResize } from "@/hooks/util"
 
